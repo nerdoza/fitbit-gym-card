@@ -1,0 +1,27 @@
+{
+  "beautify.language": {
+    "css": [
+      "css",
+      "scss"
+    ],
+    "js": [],
+    "html": []
+  },
+  "beautify.config": {
+    "indent_char": " ",
+    "indent_size": 2,
+    "newline_between_rules": true
+  },
+  "css.validate": false,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "standard.autoFixOnSave": true
+}

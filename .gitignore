@@ -1,0 +1,7 @@
+# Node / NPM
+package-lock.json
+package-log.json
+npm-debug.log
+
+# OS-specific wierdness
+.DS_Store
