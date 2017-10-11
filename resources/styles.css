@@ -1,3 +1,13 @@
+text {
+  font-family: System-Regular;
+  fill: fb-dark-gray;
+  text-anchor: middle;
+}
+
+#root {
+  viewport-fill: white;
+}
+
 #barcode rect {
   fill: black;
 }
