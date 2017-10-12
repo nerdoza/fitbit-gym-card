@@ -2,16 +2,8 @@ import * as messaging from 'messaging'
 import { settingsStorage } from 'settings'
 
 const restoreSettings = () => {
-  for (let index = 0; index < settingsStorage.length; index++) {
-    let key = settingsStorage.key(index)
-    if (key) {
-      let data = {
-        key: key,
-        newValue: JSON.parse(settingsStorage.getItem(key)).name
-      }
-      sendVal(data)
-    }
-  }
+  let code = parseCodeSettings(settingsStorage.getItem('code'))
+  sendVal({ code })
 }
 
 const sendVal = (data) => {
@@ -20,15 +12,20 @@ const sendVal = (data) => {
   }
 }
 
+const parseCodeSettings = (raw) => {
+  if (typeof raw === 'undefined' || raw === 'undefined') {
+    return null
+  }
+  return JSON.parse(raw).name.toUpperCase()
+}
+
 messaging.peerSocket.onopen = () => {
   restoreSettings()
 }
 
-settingsStorage.onchange = evt => {
-  let data = {
-    key: evt.key,
-    newValue: JSON.parse(evt.newValue).name
+settingsStorage.onchange = (event) => {
+  if (event.key === 'code') {
+    sendVal({ code: parseCodeSettings(event.newValue) })
   }
-  sendVal(data)
 }
 

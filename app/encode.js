@@ -46,7 +46,8 @@ const c39Table = {
 }
 
 export default function (value) {
-  let rawEncoding = value.toString().split('').map(l => c39Table[l])
+  let rawEncoding = value.toString()
+    .toUpperCase().split('').map(l => c39Table[l])
   rawEncoding.unshift(c39Table['*'])
   rawEncoding.push(c39Table['*'])
   return rawEncoding.join('0').split('').map(v => v === '1' ? 1 : 0)
