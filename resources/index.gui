@@ -153,5 +153,5 @@
     <rect id="bc150" width="0" height="100%" x="0" y="0"/>
   </svg>
   <text x="50%" y="100%-5" text-length="30" id="label"></text>
-  <text x="50%" y="50%-15" text-length="30" id="placeholder">No Gym Key Set</text>
+  <text x="50%" y="50%-15" text-length="30" id="placeholder">No Gym Card Set</text>
 </svg>
