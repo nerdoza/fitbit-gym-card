@@ -8,4 +8,4 @@ This is a simple app which turns the watch face into a [Code39](https://en.wikip
 - [Zachary Cardoza](https://github.com/bayssmekanique) - _Initial Author_
 
 ## License
-This project is licensed under the MIT License - see the (LICENSE.md)[LICENSE.md] file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
