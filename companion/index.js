@@ -16,7 +16,17 @@ const parseCodeSettings = (raw) => {
   if (typeof raw === 'undefined' || raw === 'undefined') {
     return null
   }
-  return JSON.parse(raw).name.toUpperCase()
+  if (typeof raw === 'string') {
+    try {
+      if (raw.startsWith('{')) {
+        return JSON.parse(raw).name.toUpperCase()
+      } else {
+        return raw.toUpperCase()
+      }
+    } catch (e) {
+      return null
+    }
+  }
 }
 
 messaging.peerSocket.onopen = () => {
